@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indian Aroma</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- TOP NAVBAR -->
+  <header class="topbar">
+
+    <div class="logo">
+      INDIAN AROMA
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#booking">Book Table</a>
+      <a href="#cancel">Cancel Booking</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="hamburger" onclick="toggleSidebar()">
+      ☰
+    </div>
+
+  </header>
+
+  <!-- MOBILE SIDEBAR -->
+  <div id="sidebar" class="sidebar">
+    <div class="close-btn" onclick="toggleSidebar()">✕</div>
+
+    <a href="#about" onclick="toggleSidebar()">About</a>
+    <a href="#menu" onclick="toggleSidebar()">Menu</a>
+    <a href="#reviews" onclick="toggleSidebar()">Reviews</a>
+    <a href="#booking" onclick="toggleSidebar()">Book Table</a>
+    <a href="#cancel" onclick="toggleSidebar()">Cancel Booking</a>
+    <a href="#contact" onclick="toggleSidebar()">Contact</a>
+  </div>
+
+  <!-- OVERLAY -->
+<div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <small>DINE WITH US</small>
+
+      <h1>
+        INDIAN <br>
+        AROMA
+      </h1>
+
+      <p>WHERE TRADITION MEETS MODERN TASTE</p>
+
+      <a href="#booking" class="btn">BOOK NOW</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop" alt="Restaurant" />
+    </div>
+
+    <div class="about-content">
+
+      <h2 class="section-title">
+        Where Tradition Meets Modern Taste
+      </h2>
+
+      <p>
+        Indian Aroma brings together the rich heritage of Indian cuisine and contemporary culinary artistry.
+        Inspired by flavors from across the country, our chefs craft every dish using authentic spices,
+        fresh ingredients, and modern techniques to create a memorable dining experience.
+      </p>
+
+      <p>
+        Whether you're joining us for a family gathering, a casual meal, or a special celebration,
+        Indian Aroma offers warm hospitality, elegant ambiance, and flavors that feel like home.
+      </p>
+
+      <div class="quote">
+        "Every dish tells a story of tradition, crafted for today's palate."
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+
+    <h2>OUR MENU</h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=1974&auto=format&fit=crop" alt="Food" />
+        <h3>Appetizers</h3>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=1974&auto=format&fit=crop" alt="Food" />
+        <h3>Main Course</h3>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1932&auto=format&fit=crop" alt="Dessert" />
+        <h3>Sweet Endings</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonial" id="reviews">
+
+    <h2>Love for Indian Aroma</h2>
+
+    <div class="review-grid">
+
+      <div class="review">
+        <h3>An Absolute Gem in Bengaluru</h3>
+        <p>
+          The flavors here are incredibly rich, authentic, and unforgettable!
+        </p>
+        <span>— Priya Sharma</span>
+      </div>
+
+      <div class="review">
+        <h3>Incredible Food & Ambience</h3>
+        <p>
+          The vibe matches perfectly with Bangalore’s energy.
+        </p>
+        <span>— Rahul Varma</span>
+      </div>
+
+      <div class="review">
+        <h3>Perfect for Client Lunches</h3>
+        <p>
+          High-quality authentic Indian dining experience.
+        </p>
+        <span>— Arjun Nair</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="booking" id="booking">
+
+    <h2>Reserve Your Table</h2>
+
+    <form id="bookingForm">
+
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="tel" id="phone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
+      <input type="date" id="date" required />
+
+      <select id="time" required>
+        <option value="">Select Time</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="1:00 PM">1:00 PM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="7:00 PM">7:00 PM</option>
+        <option value="8:00 PM">8:00 PM</option>
+        <option value="9:00 PM">9:00 PM</option>
+      </select>
+
+      <input type="number" id="guests" placeholder="Guests" min="1" max="100" required>
+
+      <textarea id="specialRequest" placeholder="Special Requests"></textarea>
+
+      <button type="submit">Book Table</button>
+
+    </form>
+
+    <p id="message"></p>
+
+  </section>
+
+  <!-- CANCEL BOOKING -->
+  <section class="cancel-booking" id="cancel">
+
+    <h2>Cancel Reservation</h2>
+
+    <p class="cancel-note">
+      Reservations can only be cancelled at least 1 hour before the scheduled booking time.
+    </p>
+
+    <input type="email" id="cancelEmail" placeholder="Email">
+    <input type="date" id="cancelDate" required>
+
+    <button type="button" onclick="cancelBooking()">
+      Cancel Booking
+    </button>
+
+    <p id="cancelMessage"></p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+
+    <h2>SEE YOU SOON</h2>
+
+    <div class="footer-line"></div>
+
+    <p>contact@indianaroma.com</p>
+    <p>123-456-789</p>
+    <p>Bengaluru, Karnataka</p>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <!-- SIDEBAR SCRIPT -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
