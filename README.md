@@ -68,7 +68,7 @@ Many local restaurants struggle to establish a strong online presence. This webs
 
 1. Clone the repository
 
-git clone <repository-url>
+git clone <[repository-url](https://github.com/kavyanayana004-cell/FUTURE_FS_02)>
 
 2. Open the project folder
 
